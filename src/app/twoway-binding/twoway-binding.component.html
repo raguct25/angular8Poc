@@ -1,0 +1,30 @@
+<p>twoway-binding works!</p>
+<div class="center">
+<input type="text" placeholder="two way binding test" [(ngModel)]= "data">
+<input type="text" placeholder="single way binding test" [ngModel]= "data">
+<p>{{data}}</p>
+</div>
+
+<h3 [ngStyle]="{color: getColor()}">this testing is ngIf</h3>
+
+<h3 [ngClass]="{white: flag}">this testing is ngClass </h3>
+
+<p *ngIf="flag;else elseblo">Flag is true</p>
+<ng-template #elseblo>
+    <p>Flag is false</p>
+</ng-template>
+
+<button (click)="checkNgif()">check ngIf</button>
+
+<h1>student name list</h1>
+<input type="text" placeholder="name" [(ngModel)]="currentName">
+<li *ngFor="let names of students">{{names}}</li>
+
+<button (click)="add()">Add student</button>
+
+<h1>small assignment task</h1>
+<button (click)="display()">Task test</button>
+<!-- *ngIf="state=== true" -->
+<p  [ngStyle]="{color: getLength()}">The testing in angular project in thiway implementation of the sample poc project </p>
+
+<p *ngFor="let buttonclicks of counter">{{buttonclicks}}</p>
