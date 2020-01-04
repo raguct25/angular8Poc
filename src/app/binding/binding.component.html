@@ -1,0 +1,32 @@
+<p>Property binding works!</p>
+<div class='container'>
+    
+<div class="pt-1 pb-3">
+    <input type="text" value="ragu" [id]="inputId">
+    <input type="text" value="test gandhi" id="inputId" [disabled]="hasError">
+    <input type="text" value="gandhi" id="inputId" disabled="hasError">
+    <input type="text" value="daniel" id={{inputId}} [disabled]="false">
+    <input type="text" value="who am i" id={{inputId}} bind-disabled="true">
+</div>
+
+</div>
+
+<p>Class binding works!</p>
+<div class='container'>
+    
+<h3 class="text-success">normal class- sucesss</h3>
+<h3 [class]="successClass">class binding - sucesss</h3>
+<h3 class="text-style" [class]="successClass">class binding Vs normal class declaration- sucesss</h3>
+<h3 [class.text-danger]="hasError">class binding with boolean condition</h3>
+<h3 [ngClass]="multiClass">ng class- execute multiple class</h3>
+
+</div>
+
+<p>Style binding works!</p>
+<div class='container'>
+    
+<h2 [style.color]="'orange'">style binding-1</h2>
+<h2 [style.color]="hasError ? 'green': 'blue'">style binding condition based</h2>
+<h2 [ngStyle]="styleBinding">style binding multi style</h2>
+
+</div>

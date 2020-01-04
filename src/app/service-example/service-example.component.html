@@ -1,0 +1,54 @@
+<p>list-employess work!</p>
+<h2>{{errorMsg}}</h2>
+
+<div class="card card-primary" *ngFor="let employee of employees">
+    <div class="card-heading mx-auto">
+        <h3 class="card-title">{{employee.first_name}}</h3>
+    </div>
+    <div class="card-body">
+        <div class="col-xs-10">
+            <div class="row vertical-align">
+                <div class="col-xs-4">
+                    <img class="imageClass" [src]="employee.avatar" />
+                </div>
+                <div class="col-xs-8 ml-5">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            First Name
+                        </div>
+                        <div class="col-xs-6">
+                            : {{employee.first_name}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            Id
+                        </div>
+                        <div class="col-xs-6">
+                            : {{employee.id}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            Gmail
+                        </div>
+                        <div class="col-xs-6">
+                            : {{employee.email}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            LastName
+                        </div>
+                        <div class="col-xs-6">
+                            : {{employee.last_name}}
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

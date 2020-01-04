@@ -1,0 +1,51 @@
+<p>structural-directives works!</p>
+<div class="container">
+    <h4 *ngIf="true">ngIf normal</h4>
+    <h4 *ngIf="display; else elseBlockTest">ngIf with data binding </h4>
+    <ng-template #elseBlockTest>
+        <h5>Inside ng-template tag</h5>
+    </ng-template>
+
+    <h4 *ngIf="displayBlock;then thenTest; else elseTest">ngIf with data binding </h4>
+    <ng-template #thenTest>
+        <h5>Then block ng-template tag</h5>
+    </ng-template>
+    <ng-template #elseTest>
+        <h5>Else block ng-template tag</h5>
+    </ng-template>
+</div>
+
+<p class="pt-3">Ng Switch works!</p>
+<div class="container">
+    <div bind-ngSwitch="switchData">
+        <p *ngSwitchCase="'home'">Wrok from home</p>
+        <p *ngSwitchCase="'office'">Wrok from office</p>
+        <p *ngSwitchCase="'room'">Wrok from room</p>
+        <p *ngSwitchDefault>You are working office</p>
+    </div>
+    <div class="pt-2">
+        <div *ngFor="let employee of employees; index as indexNoTest">
+            <h3 class="card-title">{{indexNoTest +1}}- {{employee}}</h3>
+        </div>
+    </div>
+    <div class="pt-2">
+        <div *ngFor="let employee of employees; first as f">
+            <h3 class="card-title">{{f}}- {{employee}}</h3>
+        </div>
+    </div>
+    <div class="pt-2">
+        <div *ngFor="let employee of employees; last as l">
+            <h3 class="card-title">{{l}}- {{employee}}</h3>
+        </div>
+    </div>
+    <div class="pt-2">
+        <div *ngFor="let employee of employees; even as e">
+            <h3 class="card-title">{{e}}- {{employee}}</h3>
+        </div>
+    </div>
+    <div class="pt-2">
+        <div *ngFor="let employee of employees; odd as o">
+            <h3 class="card-title">{{o}}- {{employee}}</h3>
+        </div>
+    </div>
+</div>

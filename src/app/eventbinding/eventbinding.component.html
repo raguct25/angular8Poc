@@ -1,0 +1,16 @@
+<p class="pt-4">eventbinding works!</p>
+<div class="container">
+    <button (click)="clickButton($event)">First</button>
+    {{buttonClicked}}
+    <button (click)="buttonClicked = 'the second was clicked'">Second</button>
+    {{buttonClicked}}
+    <input #referenceName type="text">
+    <button (click)="referenceClick(referenceName.value)">Template reference variable</button>
+
+    <div class="center">
+        <input type="text" placeholder="two way binding test" [(ngModel)]="data">
+        <input type="text" placeholder="single way binding test" [ngModel]="data">
+        <p>{{data}}</p>
+    </div>
+
+</div>
